@@ -12,15 +12,12 @@ let dbs: Database = null;
 let store: Store = null;
 
 app.post("/apply-theme", (req, res) => {
-    console.log(req.body);
-
     process.env["THEME"] = req.body.theme;
-    var file = JSON.parse(readFileSync(join(__dirname, "../register.json")).toString());
-    console.log(file);
+    var file = JSON.parse(readFileSync(join(__dirname, "../srv-config.json")).toString());
 
     file.theme = req.body.theme;
 
-    writeFileSync(join(__dirname, "../register.json"), JSON.stringify(file));
+    writeFileSync(join(__dirname, "../srv-config.json"), JSON.stringify(file));
 
     res.redirect(req.headers.referer);
 });
