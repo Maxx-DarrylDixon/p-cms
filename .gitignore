@@ -1,12 +1,2 @@
 node_modules/
 dist/srv-config.json
-src/themes/*
-!src/themes/example/
-!src/themes/example/*.*
-!src/themes/example.1/
-!src/themes/example.1/*.*
-dist/themes/*
-!dist/themes/example/
-!dist/themes/example/*.*
-!dist/themes/example.1/
-!dist/themes/example.1/*.*
